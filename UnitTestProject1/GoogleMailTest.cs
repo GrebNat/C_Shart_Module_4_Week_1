@@ -19,7 +19,6 @@ namespace GoogleTest
     public class GoogleMailTest
     {
         private const string url = "http://google.com";
-        private const string driverPath = "D:/С#AutomationClasses/Module 4 Week 1/UnitTestProject1/packages/Selenium.WebDriver.ChromeDriver.2.22.0.0/driver";
 
         private const string signInId = "gb_70";
         private const string accountId = "Email";
@@ -60,7 +59,7 @@ namespace GoogleTest
         [SetUp]
         public void Setup()
         {
-            driver = new ChromeDriver(driverPath);
+            driver = new ChromeDriver();
             driver.Manage().Window.Maximize();
             driver.Manage().Timeouts().ImplicitlyWait(TimeSpan.FromSeconds(10));
 
